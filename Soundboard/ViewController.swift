@@ -3,7 +3,7 @@ import UIKit
 class ViewController: UIViewController {
   
   @IBAction func didTapPlayButton(_ sender: Any) {
-    AudioManager.sharedInstance.playSound()
+    AudioManager.sharedInstance.play(sound: "catapult-the-propaganda")
   }
   
 }

@@ -15,8 +15,8 @@ struct AudioManager {
     }
   }
   
-  mutating func playSound() {
-    if let sound = NSDataAsset(name: "catapult-the-propaganda") {
+  mutating func play(sound: String) {
+    if let sound = NSDataAsset(name: sound) {
       do {
         let player = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
         currentPlayer = player
