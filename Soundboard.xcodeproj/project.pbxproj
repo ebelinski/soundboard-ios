@@ -13,6 +13,7 @@
 		B60CF0561E176B5E00F0E42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60CF0551E176B5E00F0E42C /* Assets.xcassets */; };
 		B60CF0591E176B5E00F0E42C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60CF0571E176B5E00F0E42C /* LaunchScreen.storyboard */; };
 		B65101D61E186185007F0ED0 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65101D51E186185007F0ED0 /* AudioManager.swift */; };
+		B65101D81E186293007F0ED0 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65101D71E186293007F0ED0 /* ItemManager.swift */; };
 		B67F79731E185B5900462019 /* AudioAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67F79721E185B5900462019 /* AudioAssets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		B60CF0581E176B5E00F0E42C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B60CF05A1E176B5E00F0E42C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65101D51E186185007F0ED0 /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; tabWidth = 2; };
+		B65101D71E186293007F0ED0 /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		B67F79721E185B5900462019 /* AudioAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AudioAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				B60CF04E1E176B5E00F0E42C /* AppDelegate.swift */,
 				B60CF0501E176B5E00F0E42C /* ViewController.swift */,
 				B65101D51E186185007F0ED0 /* AudioManager.swift */,
+				B65101D71E186293007F0ED0 /* ItemManager.swift */,
 				B60CF0521E176B5E00F0E42C /* Main.storyboard */,
 				B60CF0551E176B5E00F0E42C /* Assets.xcassets */,
 				B60CF0571E176B5E00F0E42C /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				B65101D61E186185007F0ED0 /* AudioManager.swift in Sources */,
 				B60CF0511E176B5E00F0E42C /* ViewController.swift in Sources */,
+				B65101D81E186293007F0ED0 /* ItemManager.swift in Sources */,
 				B60CF04F1E176B5E00F0E42C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
