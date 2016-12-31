@@ -3,7 +3,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
   
-  var currentSound: AVAudioPlayer?
+  var currentPlayer: AVAudioPlayer?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -16,11 +16,11 @@ class ViewController: UIViewController {
   }
   
   @IBAction func didTapPlayButton(_ sender: Any) {
-    if let soundURL = Bundle.main.url(forResource: "catapult-the-propaganda", withExtension: "mp3") {
+    if let sound = NSDataAsset(name: "catapult-the-propaganda") {
       do {
-        let sound = try AVAudioPlayer(contentsOf: soundURL)
-        currentSound = sound
-        sound.play()
+        let player = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+        currentPlayer = player
+        player.play()
       } catch {
         print(error.localizedDescription)
       }
