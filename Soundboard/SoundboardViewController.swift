@@ -13,6 +13,12 @@ class SoundboardViewController: UITableViewController {
     }
   }
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    tableView.register(UINib(nibName: "ItemTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "itemcell")
+  }
+  
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
@@ -22,8 +28,12 @@ class SoundboardViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell()
-    cell.textLabel?.text = sourceItems[indexPath.row].name
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemcell", for: indexPath) as? ItemTableViewCell else {
+      return UITableViewCell()
+    }
+    
+    cell.nameLabel?.text = sourceItems[indexPath.row].name
+    cell.descriptionLabel?.text = sourceItems[indexPath.row].description
     return cell
   }
   
