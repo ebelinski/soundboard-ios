@@ -2,11 +2,6 @@ import UIKit
 
 class SoundboardViewController: UITableViewController {
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    print(tableView.numberOfRows(inSection: 0))
-  }
-  
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
@@ -23,10 +18,6 @@ class SoundboardViewController: UITableViewController {
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     AudioManager.sharedInstance.play(sound: ItemManager.sharedInstance.items[indexPath.row].audioFileName)
-  }
-  
-  @IBAction func didTapPlayButton(_ sender: Any) {
-    AudioManager.sharedInstance.play(sound: ItemManager.sharedInstance.items[0].audioFileName)
   }
   
 }
