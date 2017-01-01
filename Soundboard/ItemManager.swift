@@ -20,11 +20,11 @@ struct ItemManager {
       let rawItems = contents.characters.split{$0 == "\n"}.map(String.init)
       for line in rawItems {
         let rawItem = line.characters.split{$0 == "|"}.map(String.init)
-        if rawItem.count == 2 {
-          items.append(Item(rawItem: rawItem))
-        } else {
+        if rawItem.count != 2 {
           print("Invalid rawItem length")
+          continue
         }
+        items.append(Item(rawItem: rawItem))
       }
     } catch {
       print(error.localizedDescription)
