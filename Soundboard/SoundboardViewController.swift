@@ -2,6 +2,8 @@ import UIKit
 
 class SoundboardViewController: UITableViewController {
   
+  @IBOutlet weak var searchBar: UISearchBar!
+  
   let items = ItemManager.sharedInstance.items
   var filteredItems = [Item]()
   var showFilteredItems = false
@@ -26,7 +28,12 @@ class SoundboardViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    searchBar.resignFirstResponder()
     AudioManager.sharedInstance.play(sound: sourceItems[indexPath.row].name)
+  }
+  
+  override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    searchBar.resignFirstResponder()
   }
   
 }
