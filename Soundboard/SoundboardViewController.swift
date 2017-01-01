@@ -43,7 +43,7 @@ class SoundboardViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 125
+    return 130
   }
   
   override func scrollViewDidScroll(_ scrollView: UIScrollView) {
