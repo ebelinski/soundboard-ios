@@ -30,3 +30,32 @@ class SoundboardViewController: UITableViewController {
   }
   
 }
+
+
+extension SoundboardViewController {
+  
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    if searchText == "" {
+      showFilteredItems = false
+    } else {
+      filterItems(searchText)
+      showFilteredItems = true
+    }
+    
+    tableView.reloadData()
+  }
+  
+  fileprivate func filterItems(_ text: String) {
+    let lowercaseText = text.lowercased()
+    
+    filteredItems = []
+    
+    for item in items {
+      if (item.name.lowercased().range(of: lowercaseText) != nil)
+        || (item.description.lowercased().range(of: lowercaseText) != nil) {
+          filteredItems.append(item)
+      }
+    }
+  }
+  
+}
