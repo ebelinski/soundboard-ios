@@ -16,14 +16,17 @@ struct AudioManager {
   }
   
   mutating func play(sound: String) {
-    if let sound = NSDataAsset(name: sound) {
-      do {
-        let player = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
-        currentPlayer = player
-        player.play()
-      } catch {
-        print(error.localizedDescription)
-      }
+    guard let sound = NSDataAsset(name: sound) else {
+      print("Could not obtain sound asset")
+      return
+    }
+    
+    do {
+      let player = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+      currentPlayer = player
+      player.play()
+    } catch {
+      print(error.localizedDescription)
     }
   }
   
