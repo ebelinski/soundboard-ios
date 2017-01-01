@@ -30,6 +30,13 @@ struct ItemManager {
       print(error.localizedDescription)
     }
     
+    items.sort(by: {
+      if $0.name.isEmpty && $1.name.isEmpty { return true }
+      if $1.name.isEmpty { return true }
+      if $0.name.isEmpty { return false }
+      return $0.name.uppercased() < $1.name.uppercased()
+    })
+    
     self.items = items
   }
     
