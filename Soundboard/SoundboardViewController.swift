@@ -42,6 +42,10 @@ class SoundboardViewController: UITableViewController {
     AudioManager.sharedInstance.play(sound: sourceItems[indexPath.row].name)
   }
   
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 125
+  }
+  
   override func scrollViewDidScroll(_ scrollView: UIScrollView) {
     searchBar.resignFirstResponder()
   }
