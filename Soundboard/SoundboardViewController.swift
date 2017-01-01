@@ -17,7 +17,7 @@ class SoundboardViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    AudioManager.sharedInstance.play(sound: ItemManager.sharedInstance.items[indexPath.row].audioFileName)
+    AudioManager.sharedInstance.play(sound: ItemManager.sharedInstance.items[indexPath.row].name)
   }
   
 }
