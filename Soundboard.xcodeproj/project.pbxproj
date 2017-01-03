@@ -19,6 +19,9 @@
 		B65101DE1E1868ED007F0ED0 /* items.csv in Resources */ = {isa = PBXBuildFile; fileRef = B65101DD1E1868ED007F0ED0 /* items.csv */; };
 		B65101E11E19B998007F0ED0 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65101DF1E19B998007F0ED0 /* ItemTableViewCell.swift */; };
 		B65101E21E19B998007F0ED0 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B65101E01E19B998007F0ED0 /* ItemTableViewCell.xib */; };
+		B664DE431E1C64F100302AAE /* SoundboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B664DE421E1C64F100302AAE /* SoundboardViewController.swift */; };
+		B664DE461E1C650D00302AAE /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B664DE441E1C650D00302AAE /* ItemCollectionViewCell.swift */; };
+		B664DE471E1C650D00302AAE /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B664DE451E1C650D00302AAE /* ItemCollectionViewCell.xib */; };
 		B67F79731E185B5900462019 /* AudioAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67F79721E185B5900462019 /* AudioAssets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,9 @@
 		B65101DD1E1868ED007F0ED0 /* items.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = items.csv; sourceTree = "<group>"; };
 		B65101DF1E19B998007F0ED0 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		B65101E01E19B998007F0ED0 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		B664DE421E1C64F100302AAE /* SoundboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundboardViewController.swift; sourceTree = "<group>"; };
+		B664DE441E1C650D00302AAE /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		B664DE451E1C650D00302AAE /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		B67F79721E185B5900462019 /* AudioAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AudioAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +80,7 @@
 			children = (
 				B60CF04E1E176B5E00F0E42C /* AppDelegate.swift */,
 				B60CF0501E176B5E00F0E42C /* SoundListViewController.swift */,
+				B664DE421E1C64F100302AAE /* SoundboardViewController.swift */,
 				B65101D51E186185007F0ED0 /* AudioManager.swift */,
 				B65101D71E186293007F0ED0 /* ItemManager.swift */,
 				B65101DB1E18679F007F0ED0 /* Constants.swift */,
@@ -81,6 +88,8 @@
 				B65101DF1E19B998007F0ED0 /* ItemTableViewCell.swift */,
 				B65101E01E19B998007F0ED0 /* ItemTableViewCell.xib */,
 				B60CF0521E176B5E00F0E42C /* Main.storyboard */,
+				B664DE441E1C650D00302AAE /* ItemCollectionViewCell.swift */,
+				B664DE451E1C650D00302AAE /* ItemCollectionViewCell.xib */,
 				B65101DD1E1868ED007F0ED0 /* items.csv */,
 				B60CF0551E176B5E00F0E42C /* Assets.xcassets */,
 				B60CF0571E176B5E00F0E42C /* LaunchScreen.storyboard */,
@@ -153,6 +162,7 @@
 				B65101DE1E1868ED007F0ED0 /* items.csv in Resources */,
 				B67F79731E185B5900462019 /* AudioAssets.xcassets in Resources */,
 				B60CF0591E176B5E00F0E42C /* LaunchScreen.storyboard in Resources */,
+				B664DE471E1C650D00302AAE /* ItemCollectionViewCell.xib in Resources */,
 				B60CF0561E176B5E00F0E42C /* Assets.xcassets in Resources */,
 				B65101E21E19B998007F0ED0 /* ItemTableViewCell.xib in Resources */,
 				B60CF0541E176B5E00F0E42C /* Main.storyboard in Resources */,
@@ -167,7 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65101DA1E186322007F0ED0 /* Item.swift in Sources */,
+				B664DE431E1C64F100302AAE /* SoundboardViewController.swift in Sources */,
 				B65101D61E186185007F0ED0 /* AudioManager.swift in Sources */,
+				B664DE461E1C650D00302AAE /* ItemCollectionViewCell.swift in Sources */,
 				B60CF0511E176B5E00F0E42C /* SoundListViewController.swift in Sources */,
 				B65101D81E186293007F0ED0 /* ItemManager.swift in Sources */,
 				B60CF04F1E176B5E00F0E42C /* AppDelegate.swift in Sources */,
