@@ -15,6 +15,7 @@ class SoundboardViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    view.backgroundColor = appColorMedium
     
     tableView.register(UINib(nibName: "ItemTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "itemcell")
   }
