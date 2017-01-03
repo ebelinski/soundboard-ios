@@ -9,9 +9,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UINavigationBar.appearance().barTintColor = appColorMedium
     UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     
-    UITabBar.appearance().barTintColor = appColorMedium
+    UITabBar.appearance().barTintColor = appColorDark
+    UITabBar.appearance().tintColor = UIColor.white
     UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for: .selected)
-    UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.lightGray], for: .normal)
     
     UISearchBar.appearance().barTintColor = appColorMedium
 
