@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B60CF04F1E176B5E00F0E42C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60CF04E1E176B5E00F0E42C /* AppDelegate.swift */; };
-		B60CF0511E176B5E00F0E42C /* SoundboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60CF0501E176B5E00F0E42C /* SoundboardViewController.swift */; };
+		B60CF0511E176B5E00F0E42C /* SoundListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60CF0501E176B5E00F0E42C /* SoundListViewController.swift */; };
 		B60CF0541E176B5E00F0E42C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60CF0521E176B5E00F0E42C /* Main.storyboard */; };
 		B60CF0561E176B5E00F0E42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60CF0551E176B5E00F0E42C /* Assets.xcassets */; };
 		B60CF0591E176B5E00F0E42C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60CF0571E176B5E00F0E42C /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 /* Begin PBXFileReference section */
 		B60CF04B1E176B5E00F0E42C /* Soundboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soundboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60CF04E1E176B5E00F0E42C /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
-		B60CF0501E176B5E00F0E42C /* SoundboardViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = SoundboardViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
+		B60CF0501E176B5E00F0E42C /* SoundListViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = SoundListViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		B60CF0531E176B5E00F0E42C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B60CF0551E176B5E00F0E42C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B60CF0581E176B5E00F0E42C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				B60CF04E1E176B5E00F0E42C /* AppDelegate.swift */,
-				B60CF0501E176B5E00F0E42C /* SoundboardViewController.swift */,
+				B60CF0501E176B5E00F0E42C /* SoundListViewController.swift */,
 				B65101D51E186185007F0ED0 /* AudioManager.swift */,
 				B65101D71E186293007F0ED0 /* ItemManager.swift */,
 				B65101DB1E18679F007F0ED0 /* Constants.swift */,
@@ -168,7 +168,7 @@
 			files = (
 				B65101DA1E186322007F0ED0 /* Item.swift in Sources */,
 				B65101D61E186185007F0ED0 /* AudioManager.swift in Sources */,
-				B60CF0511E176B5E00F0E42C /* SoundboardViewController.swift in Sources */,
+				B60CF0511E176B5E00F0E42C /* SoundListViewController.swift in Sources */,
 				B65101D81E186293007F0ED0 /* ItemManager.swift in Sources */,
 				B60CF04F1E176B5E00F0E42C /* AppDelegate.swift in Sources */,
 				B65101E11E19B998007F0ED0 /* ItemTableViewCell.swift in Sources */,

@@ -1,6 +1,6 @@
 import UIKit
 
-class SoundboardViewController: UITableViewController {
+class SoundListViewController: UITableViewController {
   
   @IBOutlet weak var searchBar: UISearchBar!
   
@@ -54,7 +54,7 @@ class SoundboardViewController: UITableViewController {
 }
 
 
-extension SoundboardViewController {
+extension SoundListViewController {
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     if searchText == "" {
