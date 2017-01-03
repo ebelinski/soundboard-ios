@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" id="1xt-32-ZnY" userLabel="About"/>
+                    <tabBarItem key="tabBarItem" title="About" image="info" selectedImage="info" id="1xt-32-ZnY" userLabel="About"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffd-0f-UD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,7 +49,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z99-At-mWC" id="bXD-hb-NaU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -72,7 +72,7 @@
         <scene sceneID="J1Z-oL-gXd">
             <objects>
                 <navigationController id="xYz-ps-gNh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Soundboard" id="JFc-Zi-o1F"/>
+                    <tabBarItem key="tabBarItem" title="Soundboard" image="list" selectedImage="list" id="JFc-Zi-o1F"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u4F-Xh-aSQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -104,4 +104,8 @@
             <point key="canvasLocation" x="-729" y="599"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="30" height="30"/>
+        <image name="list" width="30" height="30"/>
+    </resources>
 </document>
