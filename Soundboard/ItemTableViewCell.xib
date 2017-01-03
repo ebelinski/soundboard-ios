@@ -15,41 +15,71 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="129.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbe-I0-xI9">
-                        <rect key="frame" x="20" y="11" width="292" height="21"/>
+                        <rect key="frame" x="20" y="8" width="211" height="29"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="IDC-cL-dTn"/>
+                            <constraint firstAttribute="height" constant="29" id="4kV-12-aZR"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keN-PA-moZ">
-                        <rect key="frame" x="20" y="37" width="292" height="84.5"/>
+                        <rect key="frame" x="20" y="37" width="211" height="85"/>
                         <string key="text">Description of sound. Lorem ipsum dolor sedset something something latin more latin I wish I knew latin, no way I'd bother learning it though, it's not useful enough to actually learn, no offense to anyone who learned latin.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.28620871113989632" green="0.28620871113989632" blue="0.28620871113989632" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJj-U7-jMJ">
+                        <rect key="frame" x="239" y="0.0" width="81" height="130"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKM-dz-OtA">
+                                <rect key="frame" x="19" y="46" width="43" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="KN8-Et-IV6"/>
+                                    <constraint firstAttribute="width" constant="43" id="j9X-lx-R1P"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="heart_unfilled"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NKM-dz-OtA" secondAttribute="bottom" constant="45" id="Ccv-t9-qX2"/>
+                            <constraint firstAttribute="width" constant="81" id="Mnc-DQ-LTF"/>
+                            <constraint firstAttribute="trailing" secondItem="NKM-dz-OtA" secondAttribute="trailing" constant="19" id="jBh-f7-UWx"/>
+                            <constraint firstItem="NKM-dz-OtA" firstAttribute="leading" secondItem="SJj-U7-jMJ" secondAttribute="leading" constant="19" id="kW2-w6-cvX"/>
+                            <constraint firstItem="NKM-dz-OtA" firstAttribute="top" secondItem="SJj-U7-jMJ" secondAttribute="top" constant="46" id="og4-hx-rkW"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="keN-PA-moZ" secondAttribute="trailing" constant="8" id="9J5-hM-Azs"/>
-                    <constraint firstAttribute="bottom" secondItem="keN-PA-moZ" secondAttribute="bottom" constant="8" id="MXX-he-Fmr"/>
-                    <constraint firstItem="keN-PA-moZ" firstAttribute="top" secondItem="pbe-I0-xI9" secondAttribute="bottom" constant="5" id="RIy-qn-Eli"/>
-                    <constraint firstItem="pbe-I0-xI9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="VeA-Sa-skj"/>
-                    <constraint firstAttribute="trailing" secondItem="pbe-I0-xI9" secondAttribute="trailing" constant="8" id="lg8-cD-PbU"/>
-                    <constraint firstItem="keN-PA-moZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="oqM-Wj-1Qr"/>
-                    <constraint firstItem="pbe-I0-xI9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="p6x-B5-Qd8"/>
+                    <constraint firstItem="pbe-I0-xI9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1J7-9G-1UY"/>
+                    <constraint firstItem="SJj-U7-jMJ" firstAttribute="leading" secondItem="keN-PA-moZ" secondAttribute="trailing" constant="8" id="1ht-Bw-Vzw"/>
+                    <constraint firstItem="keN-PA-moZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="AM4-3D-4w1"/>
+                    <constraint firstItem="keN-PA-moZ" firstAttribute="top" secondItem="pbe-I0-xI9" secondAttribute="bottom" id="Lia-Pc-tLT"/>
+                    <constraint firstItem="SJj-U7-jMJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Nd3-LM-x5F"/>
+                    <constraint firstItem="keN-PA-moZ" firstAttribute="top" secondItem="pbe-I0-xI9" secondAttribute="bottom" id="VVn-e5-c1n"/>
+                    <constraint firstAttribute="bottom" secondItem="keN-PA-moZ" secondAttribute="bottom" constant="7.5" id="fb9-23-MTi"/>
+                    <constraint firstItem="SJj-U7-jMJ" firstAttribute="leading" secondItem="pbe-I0-xI9" secondAttribute="trailing" constant="8" id="g4u-uA-njj"/>
+                    <constraint firstItem="pbe-I0-xI9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="pUp-Gm-lez"/>
+                    <constraint firstAttribute="bottom" secondItem="SJj-U7-jMJ" secondAttribute="bottom" id="xuu-IP-RH7"/>
+                    <constraint firstAttribute="trailing" secondItem="SJj-U7-jMJ" secondAttribute="trailing" id="ziv-fi-hiE"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionLabel" destination="keN-PA-moZ" id="3rv-Gb-lLC"/>
+                <outlet property="favoriteButton" destination="NKM-dz-OtA" id="fb9-AI-yfy"/>
+                <outlet property="favoriteButtonContainer" destination="SJj-U7-jMJ" id="WRG-66-vip"/>
                 <outlet property="nameLabel" destination="pbe-I0-xI9" id="zwW-ZA-el5"/>
             </connections>
             <point key="canvasLocation" x="34" y="114"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart_unfilled" width="150" height="139"/>
+    </resources>
 </document>

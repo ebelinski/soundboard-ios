@@ -4,6 +4,8 @@ class ItemTableViewCell: UITableViewCell {
   
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
+  @IBOutlet weak var favoriteButtonContainer: UIView!
+  @IBOutlet weak var favoriteButton: UIButton!
   
   override func awakeFromNib() {
     super.awakeFromNib()
