@@ -14,6 +14,10 @@ class ItemTableViewCell: UITableViewCell {
     nameLabel.textColor = UIColor.white
     descriptionLabel.textColor = UIColor.white
     favoriteButtonContainer.backgroundColor = appColorDark
+    
+    let bgColorView = UIView()
+    bgColorView.backgroundColor = appColorLight
+    selectedBackgroundView = bgColorView
   }
   
 }
