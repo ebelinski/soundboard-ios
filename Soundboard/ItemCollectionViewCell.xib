@@ -45,6 +45,10 @@
                 <constraint firstAttribute="trailing" secondItem="f0O-rJ-UHj" secondAttribute="trailing" constant="10" id="hcn-49-bxo"/>
             </constraints>
             <size key="customSize" width="116" height="116"/>
+            <connections>
+                <outlet property="shortNameLabel" destination="ynC-bI-A6A" id="kO7-xh-1c1"/>
+                <outlet property="shortNameLabelContainer" destination="f0O-rJ-UHj" id="bp3-hM-aR9"/>
+            </connections>
             <point key="canvasLocation" x="67" y="87"/>
         </collectionViewCell>
     </objects>

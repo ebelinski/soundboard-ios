@@ -5,6 +5,8 @@ class SoundboardViewController: UICollectionViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    collectionView?.backgroundColor = appColorMedium
+    
     collectionView?.register(UINib(nibName: "ItemCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "itemcell")
   }
   
