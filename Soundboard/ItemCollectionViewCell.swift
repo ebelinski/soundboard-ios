@@ -11,6 +11,11 @@ class ItemCollectionViewCell: UICollectionViewCell {
     shortNameLabel.textColor = UIColor.white
     backgroundColor = appColorMedium
     shortNameLabelContainer.backgroundColor = appColorDark
+  }
+  
+  override func draw(_ rect: CGRect) {
+    super.draw(rect)
+    
     shortNameLabelContainer.layer.cornerRadius = shortNameLabelContainer.frame.width / 2
   }
   
