@@ -2,7 +2,7 @@ import UIKit
 
 class SoundboardViewController: UICollectionViewController {
   
-  var items = ItemManager.sharedInstance.allFavoritedItems()
+  var items = ItemManager.sharedInstance.allFavoritedItemsByShortName()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -39,7 +39,7 @@ extension SoundboardViewController {
   }
   
   func updateCollection() {
-    items = ItemManager.sharedInstance.allFavoritedItems()
+    items = ItemManager.sharedInstance.allFavoritedItemsByShortName()
     collectionView?.reloadData()
   }
   

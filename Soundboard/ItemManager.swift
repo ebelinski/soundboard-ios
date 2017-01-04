@@ -48,7 +48,7 @@ struct ItemManager {
     UserDefaults.standard.set(!isFavorited(item: item), forKey: String.localizedStringWithFormat(itemFavoritedKey, item.name))
   }
   
-  func allFavoritedItems() -> [Item] {
+  func allFavoritedItemsByShortName() -> [Item] {
     var favoritedItems = [Item]()
     
     for item in items {
@@ -56,6 +56,13 @@ struct ItemManager {
         favoritedItems.append(item)
       }
     }
+    
+    favoritedItems.sort(by: {
+      if $0.shortName.isEmpty && $1.shortName.isEmpty { return true }
+      if $1.shortName.isEmpty { return true }
+      if $0.shortName.isEmpty { return false }
+      return $0.shortName.uppercased() < $1.shortName.uppercased()
+    })
     
     return favoritedItems
   }
