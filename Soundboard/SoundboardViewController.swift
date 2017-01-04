@@ -14,6 +14,19 @@ class SoundboardViewController: UICollectionViewController {
     NotificationCenter.default.addObserver(self, selector: #selector(SoundboardViewController.updateCollection), name: NSNotification.Name(rawValue: itemFavoritesDidUpdateNotificationKey), object: nil)
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    if items.count == 0 {
+      let instructionLabel = UILabel(frame: CGRect(x: 40, y: 100, width: screenWidth-80, height: 300))
+      instructionLabel.text = "Go to the All Sounds tab and tap on a heart to add a sound to your soundboard!"
+      instructionLabel.textColor = UIColor.white
+      instructionLabel.numberOfLines = 10
+      instructionLabel.sizeToFit()
+      view.addSubview(instructionLabel)
+    }
+  }
+  
 }
 
 // MARK: Data source
