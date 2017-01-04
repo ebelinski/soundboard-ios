@@ -2,6 +2,8 @@ import UIKit
 
 class SoundboardViewController: UICollectionViewController {
   
+  let items = ItemManager.sharedInstance.items
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -15,13 +17,15 @@ class SoundboardViewController: UICollectionViewController {
   }
   
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 1
+    return items.count
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemcell", for: indexPath) as? ItemCollectionViewCell else {
       return UICollectionViewCell()
     }
+    
+    cell.shortNameLabel?.text = items[indexPath.row].shortName
     
     return cell
   }
