@@ -12,6 +12,12 @@ class SoundboardViewController: UICollectionViewController {
     collectionView?.register(UINib(nibName: "ItemCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "itemcell")
   }
   
+}
+
+// MARK: Data source
+
+extension SoundboardViewController {
+  
   override func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
@@ -31,6 +37,18 @@ class SoundboardViewController: UICollectionViewController {
   }
   
 }
+
+// MARK: Delegate
+
+extension SoundboardViewController {
+  
+  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    AudioManager.sharedInstance.play(sound: items[indexPath.row].name)
+  }
+  
+}
+
+// MARK: Flow layout
 
 extension SoundboardViewController: UICollectionViewDelegateFlowLayout {
   
