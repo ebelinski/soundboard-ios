@@ -10,3 +10,5 @@ let screenWidth = min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size
 let screenHeight = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
 
 let itemFavoritedKey = "com.ebelinski.Soundboard.item.with.name.%@.favorited"
+
+let itemFavoritesDidUpdateNotificationKey = "com.ebelinski.Soundboard.itemFavoritesDidUpdateNotification"

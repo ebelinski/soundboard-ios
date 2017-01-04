@@ -34,6 +34,7 @@ class ItemTableViewCell: UITableViewCell {
     
     ItemManager.sharedInstance.toggleFavorite(item: item)
     refreshFavoriteButton()
+    NotificationCenter.default.post(name: Notification.Name(rawValue: itemFavoritesDidUpdateNotificationKey), object: self)
   }
   
   fileprivate func refreshFavoriteButton() {

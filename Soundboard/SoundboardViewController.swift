@@ -2,7 +2,7 @@ import UIKit
 
 class SoundboardViewController: UICollectionViewController {
   
-  let items = ItemManager.sharedInstance.items
+  var items = ItemManager.sharedInstance.allFavoritedItems()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -10,6 +10,8 @@ class SoundboardViewController: UICollectionViewController {
     collectionView?.backgroundColor = appColorMedium
     
     collectionView?.register(UINib(nibName: "ItemCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "itemcell")
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(SoundboardViewController.updateCollection), name: NSNotification.Name(rawValue: itemFavoritesDidUpdateNotificationKey), object: nil)
   }
   
 }
@@ -34,6 +36,11 @@ extension SoundboardViewController {
     cell.shortNameLabel?.text = items[indexPath.row].shortName
     
     return cell
+  }
+  
+  func updateCollection() {
+    items = ItemManager.sharedInstance.allFavoritedItems()
+    collectionView?.reloadData()
   }
   
 }
