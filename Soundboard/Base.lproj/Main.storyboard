@@ -9,6 +9,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Soundboard-->
+        <scene sceneID="vRo-cj-5ZC">
+            <objects>
+                <navigationController id="fDq-Q6-wwr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Soundboard" image="grid" selectedImage="grid" id="dmj-ME-Abg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aGS-fD-7c5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hvw-yq-0OK" kind="relationship" relationship="rootViewController" id="nlC-Cv-pbm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9L-h9-4dK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="599"/>
+        </scene>
+        <!--Soundboard-->
+        <scene sceneID="KI1-cI-aPJ">
+            <objects>
+                <collectionViewController id="hvw-yq-0OK" customClass="SoundboardViewController" customModule="Soundboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="ifm-9C-w9N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3uI-GD-v4P">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="hvw-yq-0OK" id="B9A-ew-aSE"/>
+                            <outlet property="delegate" destination="hvw-yq-0OK" id="WzF-FQ-V97"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Soundboard" id="2cC-zZ-Syh"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yr-Lp-Atw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1097" y="599"/>
+        </scene>
         <!--About-->
         <scene sceneID="inS-YK-7B7">
             <objects>
@@ -26,9 +69,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffd-0f-UD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="1006"/>
+            <point key="canvasLocation" x="214" y="1352"/>
         </scene>
-        <!--Soundboard-->
+        <!--All Sounds-->
         <scene sceneID="PFW-ua-4OT">
             <objects>
                 <tableViewController id="Z4l-BW-gPH" customClass="SoundListViewController" customModule="Soundboard" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,20 +102,20 @@
                             <outlet property="delegate" destination="Z4l-BW-gPH" id="aXP-ru-XjQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Soundboard" id="sus-Xr-Of3"/>
+                    <navigationItem key="navigationItem" title="All Sounds" id="sus-Xr-Of3"/>
                     <connections>
                         <outlet property="searchBar" destination="meO-na-LeG" id="8Ys-VG-RUV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GpQ-wp-JVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="215"/>
+            <point key="canvasLocation" x="1097" y="-165"/>
         </scene>
         <!--Soundboard-->
         <scene sceneID="J1Z-oL-gXd">
             <objects>
                 <navigationController id="xYz-ps-gNh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Soundboard" image="list" selectedImage="list" id="JFc-Zi-o1F"/>
+                    <tabBarItem key="tabBarItem" title="Soundboard" image="list" selectedImage="list" id="JFc-Zi-o1F" userLabel="All Sounds"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u4F-Xh-aSQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -83,7 +126,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqX-1d-S2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="215"/>
+            <point key="canvasLocation" x="215" y="-165"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zyu-GU-OeA">
@@ -96,6 +139,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="xYz-ps-gNh" kind="relationship" relationship="viewControllers" id="msf-a9-axB"/>
+                        <segue destination="fDq-Q6-wwr" kind="relationship" relationship="viewControllers" id="dmj-Hh-win"/>
                         <segue destination="K1p-V9-IDz" kind="relationship" relationship="viewControllers" id="ug8-TY-yBt"/>
                     </connections>
                 </tabBarController>
@@ -105,6 +149,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="grid" width="30" height="30"/>
         <image name="info" width="30" height="30"/>
         <image name="list" width="30" height="30"/>
     </resources>
