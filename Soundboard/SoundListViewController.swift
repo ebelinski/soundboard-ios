@@ -33,8 +33,7 @@ class SoundListViewController: UITableViewController {
       return UITableViewCell()
     }
     
-    cell.nameLabel?.text = sourceItems[indexPath.row].name
-    cell.descriptionLabel?.text = sourceItems[indexPath.row].description
+    cell.item = sourceItems[indexPath.row]
     return cell
   }
   

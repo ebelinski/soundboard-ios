@@ -39,5 +39,25 @@ struct ItemManager {
     
     self.items = items
   }
+  
+  func isFavorited(item: Item) -> Bool {
+    return UserDefaults.standard.bool(forKey: String.localizedStringWithFormat(itemFavoritedKey, item.name))
+  }
+  
+  func toggleFavorite(item: Item) {
+    UserDefaults.standard.set(!isFavorited(item: item), forKey: String.localizedStringWithFormat(itemFavoritedKey, item.name))
+  }
+  
+  func allFavoritedItems() -> [Item] {
+    var favoritedItems = [Item]()
     
+    for item in items {
+      if isFavorited(item: item) {
+        favoritedItems.append(item)
+      }
+    }
+    
+    return favoritedItems
+  }
+  
 }

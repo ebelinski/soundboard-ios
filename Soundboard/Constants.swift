@@ -8,3 +8,5 @@ let appColorLight = UIColor(red: 0.373, green: 0.651, blue: 0.714, alpha: 1) /* 
 
 let screenWidth = min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
 let screenHeight = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
+
+let itemFavoritedKey = "com.ebelinski.Soundboard.item.with.name.%@.favorited"
