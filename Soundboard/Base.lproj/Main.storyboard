@@ -30,7 +30,7 @@
         <scene sceneID="KI1-cI-aPJ">
             <objects>
                 <collectionViewController id="hvw-yq-0OK" customClass="SoundboardViewController" customModule="Soundboard" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="ifm-9C-w9N">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ifm-9C-w9N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -111,11 +111,11 @@
             </objects>
             <point key="canvasLocation" x="1097" y="-165"/>
         </scene>
-        <!--Soundboard-->
+        <!--All Sounds-->
         <scene sceneID="J1Z-oL-gXd">
             <objects>
                 <navigationController id="xYz-ps-gNh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Soundboard" image="list" selectedImage="list" id="JFc-Zi-o1F" userLabel="All Sounds"/>
+                    <tabBarItem key="tabBarItem" title="All Sounds" image="list" selectedImage="list" id="JFc-Zi-o1F" userLabel="All Sounds"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u4F-Xh-aSQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
