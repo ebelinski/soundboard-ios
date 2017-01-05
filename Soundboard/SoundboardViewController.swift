@@ -16,7 +16,7 @@ class SoundboardViewController: UICollectionViewController {
     
     let instructionLabel = UILabel(frame: CGRect(x: 40, y: 100, width: screenWidth-80, height: 300))
     instructionLabel.text = "Go to the All Sounds tab and tap on a heart to add a sound to your soundboard!"
-    instructionLabel.textColor = UIColor.white
+    instructionLabel.textColor = appColorText
     instructionLabel.numberOfLines = 10
     instructionLabel.sizeToFit()
     view.addSubview(instructionLabel)

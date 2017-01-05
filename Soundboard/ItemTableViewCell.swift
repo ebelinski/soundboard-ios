@@ -20,8 +20,8 @@ class ItemTableViewCell: UITableViewCell {
     super.awakeFromNib()
     
     backgroundColor = appColorMedium
-    nameLabel.textColor = UIColor.white
-    descriptionLabel.textColor = UIColor.white
+    nameLabel.textColor = appColorText
+    descriptionLabel.textColor = appColorText
     favoriteButtonContainer.backgroundColor = appColorDark
     
     let bgColorView = UIView()
