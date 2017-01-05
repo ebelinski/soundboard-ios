@@ -11,6 +11,8 @@ class AboutViewController: UIViewController {
   
   var buttonTwitter: UIButton?
   var buttonWebsite: UIButton?
+  var buttonWolfPAC: UIButton?
+  var buttonTYT: UIButton?
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -57,6 +59,26 @@ class AboutViewController: UIViewController {
     
     contentHeight += spaceHorizontal
     
+    let buttonWolfPAC = UIButton(frame: CGRect(x: spaceVertical, y: contentHeight, width: 0, height: 0))
+    buttonWolfPAC.setTitle("Wolf PAC", for: .normal)
+    buttonWolfPAC.addTarget(self, action: #selector(AboutViewController.didTapButtonWolfPAC(sender:)), for: .touchUpInside)
+    setButtonStandardProperties(button: buttonWolfPAC)
+    scrollView.addSubview(buttonWolfPAC)
+    self.buttonWolfPAC = buttonWolfPAC
+    contentHeight += buttonTwitter.frame.height
+    
+    contentHeight += spaceHorizontal
+    
+    let buttonTYT = UIButton(frame: CGRect(x: spaceVertical, y: contentHeight, width: 0, height: 0))
+    buttonTYT.setTitle("TYT Network", for: .normal)
+    buttonTYT.addTarget(self, action: #selector(AboutViewController.didTapButtonTYT(sender:)), for: .touchUpInside)
+    setButtonStandardProperties(button: buttonTYT)
+    scrollView.addSubview(buttonTYT)
+    self.buttonWebsite = buttonTYT
+    contentHeight += buttonTYT.frame.height
+    
+    contentHeight += spaceHorizontal
+    
     scrollView.contentSize = CGSize(
       width: contentWidth,
       height: contentHeight)
@@ -85,6 +107,14 @@ class AboutViewController: UIViewController {
   
   func didTapButtonWebsite(sender: AnyObject) {
     UIApplication.shared.open(URL(string: "http://ebelinski.com")!, options: [:], completionHandler: nil)
+  }
+  
+  func didTapButtonWolfPAC(sender: AnyObject) {
+    UIApplication.shared.open(URL(string: "http://www.wolf-pac.com")!, options: [:], completionHandler: nil)
+  }
+  
+  func didTapButtonTYT(sender: AnyObject) {
+    UIApplication.shared.open(URL(string: "https://tytnetwork.com")!, options: [:], completionHandler: nil)
   }
   
 }
