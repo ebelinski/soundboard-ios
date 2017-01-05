@@ -63,13 +63,27 @@
                     <view key="view" contentMode="scaleToFill" id="I3H-BQ-zCk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAj-Qa-M69">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nAj-Qa-M69" firstAttribute="top" secondItem="I3H-BQ-zCk" secondAttribute="top" id="GAx-oa-EU4"/>
+                            <constraint firstItem="nAj-Qa-M69" firstAttribute="leading" secondItem="I3H-BQ-zCk" secondAttribute="leading" id="W7j-We-3xg"/>
+                            <constraint firstItem="SwA-N6-p7X" firstAttribute="top" secondItem="nAj-Qa-M69" secondAttribute="bottom" id="qZE-ZD-FmQ"/>
+                            <constraint firstAttribute="trailing" secondItem="nAj-Qa-M69" secondAttribute="trailing" id="zs8-QN-FLq"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="info" selectedImage="info" id="1xt-32-ZnY" userLabel="About"/>
+                    <connections>
+                        <outlet property="scrollView" destination="nAj-Qa-M69" id="XFo-o3-LvL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffd-0f-UD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="214" y="1352"/>
+            <point key="canvasLocation" x="213.59999999999999" y="1351.5742128935533"/>
         </scene>
         <!--All Sounds-->
         <scene sceneID="PFW-ua-4OT">
