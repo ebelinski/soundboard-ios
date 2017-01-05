@@ -23,6 +23,7 @@
 		B664DE461E1C650D00302AAE /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B664DE441E1C650D00302AAE /* ItemCollectionViewCell.swift */; };
 		B664DE471E1C650D00302AAE /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B664DE451E1C650D00302AAE /* ItemCollectionViewCell.xib */; };
 		B67F79731E185B5900462019 /* AudioAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67F79721E185B5900462019 /* AudioAssets.xcassets */; };
+		B6B29D2A1E1DC84D00FA58C9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B29D291E1DC84D00FA58C9 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B664DE441E1C650D00302AAE /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		B664DE451E1C650D00302AAE /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		B67F79721E185B5900462019 /* AudioAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AudioAssets.xcassets; sourceTree = "<group>"; };
+		B6B29D291E1DC84D00FA58C9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				B60CF0501E176B5E00F0E42C /* SoundListViewController.swift */,
 				B664DE421E1C64F100302AAE /* SoundboardViewController.swift */,
+				B6B29D291E1DC84D00FA58C9 /* AboutViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				B65101D81E186293007F0ED0 /* ItemManager.swift in Sources */,
 				B60CF04F1E176B5E00F0E42C /* AppDelegate.swift in Sources */,
 				B65101E11E19B998007F0ED0 /* ItemTableViewCell.swift in Sources */,
+				B6B29D2A1E1DC84D00FA58C9 /* AboutViewController.swift in Sources */,
 				B65101DC1E18679F007F0ED0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

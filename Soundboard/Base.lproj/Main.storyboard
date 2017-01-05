@@ -55,7 +55,7 @@
         <!--About-->
         <scene sceneID="inS-YK-7B7">
             <objects>
-                <viewController id="K1p-V9-IDz" sceneMemberID="viewController">
+                <viewController id="K1p-V9-IDz" customClass="AboutViewController" customModule="Soundboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="95a-RD-qvL"/>
                         <viewControllerLayoutGuide type="bottom" id="SwA-N6-p7X"/>
