@@ -11,6 +11,10 @@ class ItemCollectionViewCell: UICollectionViewCell {
     shortNameLabel.textColor = appColorText
     backgroundColor = appColorMedium
     shortNameLabelContainer.backgroundColor = appColorDark
+    
+    if screenWidth >= 768 {
+      shortNameLabel.font = shortNameLabel.font.withSize(40)
+    }
   }
   
   override func draw(_ rect: CGRect) {
