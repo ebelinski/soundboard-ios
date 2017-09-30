@@ -13,6 +13,7 @@ struct AudioManager {
       try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
     } catch {
       print(error.localizedDescription)
+      Crashlytics.sharedInstance().recordError(error)
     }
   }
   
@@ -30,6 +31,7 @@ struct AudioManager {
       currentPlayer?.play()
     } catch {
       print(error.localizedDescription)
+      Crashlytics.sharedInstance().recordError(error)
     }
   }
   
