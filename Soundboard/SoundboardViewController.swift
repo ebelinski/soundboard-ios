@@ -1,4 +1,5 @@
 import UIKit
+import Crashlytics
 
 class SoundboardViewController: UICollectionViewController {
   
@@ -27,6 +28,11 @@ class SoundboardViewController: UICollectionViewController {
     super.viewDidAppear(animated)
     
     instructionLabel?.isHidden = (items.count != 0)
+
+    Answers.logContentView(withName: "Soundboard",
+                           contentType: nil,
+                           contentId: nil,
+                           customAttributes: nil)
   }
   
 }

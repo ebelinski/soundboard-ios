@@ -1,4 +1,5 @@
 import UIKit
+import Crashlytics
 
 class AboutViewController: UIViewController {
   
@@ -16,8 +17,14 @@ class AboutViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    
     view.backgroundColor = appColorMedium
     setUpScrollViewContent()
+
+    Answers.logContentView(withName: "About",
+                           contentType: nil,
+                           contentId: nil,
+                           customAttributes: nil)
   }
   
   private func setUpScrollViewContent() {

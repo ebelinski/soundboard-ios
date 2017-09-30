@@ -1,4 +1,5 @@
 import UIKit
+import Crashlytics
 
 class SoundListViewController: UITableViewController {
   
@@ -15,9 +16,19 @@ class SoundListViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+
     view.backgroundColor = appColorMedium
     
     tableView.register(UINib(nibName: "ItemTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "itemcell")
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+
+    Answers.logContentView(withName: "SoundList",
+                           contentType: nil,
+                           contentId: nil,
+                           customAttributes: nil)
   }
   
   override func numberOfSections(in tableView: UITableView) -> Int {
