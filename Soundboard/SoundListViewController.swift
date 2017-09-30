@@ -19,7 +19,9 @@ class SoundListViewController: UITableViewController {
 
     view.backgroundColor = appColorMedium
     
-    tableView.register(UINib(nibName: "ItemTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "itemcell")
+    tableView.register(UINib(nibName: "ItemTableViewCell",
+                             bundle: Bundle.main),
+                       forCellReuseIdentifier: "itemcell")
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -35,11 +37,13 @@ class SoundListViewController: UITableViewController {
     return 1
   }
   
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView,
+                          numberOfRowsInSection section: Int) -> Int {
     return sourceItems.count
   }
   
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  override func tableView(_ tableView: UITableView,
+                          cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "itemcell", for: indexPath) as? ItemTableViewCell else {
       return UITableViewCell()
     }
@@ -48,12 +52,14 @@ class SoundListViewController: UITableViewController {
     return cell
   }
   
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  override func tableView(_ tableView: UITableView,
+                          didSelectRowAt indexPath: IndexPath) {
     searchBar.resignFirstResponder()
     AudioManager.sharedInstance.play(sound: sourceItems[indexPath.row].name)
   }
   
-  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+  override func tableView(_ tableView: UITableView,
+                          heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 130
   }
   

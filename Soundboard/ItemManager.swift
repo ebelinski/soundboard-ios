@@ -10,7 +10,8 @@ struct ItemManager {
   init() {
     var items = [Item]()
     
-    guard let pathForCSV = Bundle.main.path(forResource: itemsCSVFileName, ofType: "csv") else {
+    guard let pathForCSV = Bundle.main.path(forResource: itemsCSVFileName,
+                                            ofType: "csv") else {
       print("Could not get pathForCSV")
       self.items = items
       return
@@ -47,7 +48,9 @@ struct ItemManager {
   }
   
   func toggleFavorite(item: Item) {
-    UserDefaults.standard.set(!isFavorited(item: item), forKey: String.localizedStringWithFormat(itemFavoritedKey, item.name))
+    UserDefaults.standard.set(!isFavorited(item: item),
+                              forKey: String.localizedStringWithFormat(itemFavoritedKey,
+                                                                       item.name))
   }
   
   func allFavoritedItemsByShortName() -> [Item] {
