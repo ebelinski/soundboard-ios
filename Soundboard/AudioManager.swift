@@ -1,4 +1,5 @@
 import UIKit
+import Crashlytics
 import AVFoundation
 
 struct AudioManager {
@@ -20,6 +21,9 @@ struct AudioManager {
       print("Could not obtain sound asset")
       return
     }
+
+    Answers.logCustomEvent(withName: "Play Sound",
+                           customAttributes: ["Sound Name": sound])
     
     do {
       currentPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
