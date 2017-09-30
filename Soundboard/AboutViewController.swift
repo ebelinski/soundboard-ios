@@ -101,19 +101,19 @@ class AboutViewController: UIViewController {
     button.layer.cornerRadius = button.frame.height / 4
   }
   
-  func didTapButtonTwitter(sender: AnyObject) {
+  @objc func didTapButtonTwitter(sender: AnyObject) {
     UIApplication.shared.open(URL(string: "https://twitter.com/EugeneBelinski")!, options: [:], completionHandler: nil)
   }
   
-  func didTapButtonWebsite(sender: AnyObject) {
+  @objc func didTapButtonWebsite(sender: AnyObject) {
     UIApplication.shared.open(URL(string: "http://ebelinski.com")!, options: [:], completionHandler: nil)
   }
   
-  func didTapButtonWolfPAC(sender: AnyObject) {
+  @objc func didTapButtonWolfPAC(sender: AnyObject) {
     UIApplication.shared.open(URL(string: "http://www.wolf-pac.com")!, options: [:], completionHandler: nil)
   }
   
-  func didTapButtonTYT(sender: AnyObject) {
+  @objc func didTapButtonTYT(sender: AnyObject) {
     UIApplication.shared.open(URL(string: "https://tytnetwork.com")!, options: [:], completionHandler: nil)
   }
   

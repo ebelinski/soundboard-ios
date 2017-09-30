@@ -53,7 +53,7 @@ extension SoundboardViewController {
     return cell
   }
   
-  func updateCollection() {
+  @objc func updateCollection() {
     items = ItemManager.sharedInstance.allFavoritedItemsByShortName()
     collectionView?.reloadData()
   }

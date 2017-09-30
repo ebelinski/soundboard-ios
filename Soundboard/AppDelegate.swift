@@ -7,11 +7,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     UINavigationBar.appearance().barTintColor = appColorMedium
-    UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: appColorText]
+    UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: appColorText]
     
     UITabBar.appearance().barTintColor = appColorDark
     UITabBar.appearance().tintColor = appColorText
-    UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: appColorText], for: .selected)
+    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: appColorText], for: .selected)
     
     UISearchBar.appearance().barTintColor = appColorMedium
 

@@ -22,7 +22,7 @@ struct AudioManager {
     }
     
     do {
-      currentPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeMPEGLayer3)
+      currentPlayer = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileType.mp3.rawValue)
       currentPlayer?.play()
     } catch {
       print(error.localizedDescription)
