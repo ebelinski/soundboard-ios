@@ -1,5 +1,6 @@
 import UIKit
 import Crashlytics
+import SafariServices
 
 class AboutViewController: UIViewController {
   
@@ -10,10 +11,10 @@ class AboutViewController: UIViewController {
   let contentWidth: CGFloat = screenWidth - 20 * 2
   let fontSize: CGFloat = 28
   
-  var buttonTwitter: UIButton?
-  var buttonWebsite: UIButton?
-  var buttonWolfPAC: UIButton?
-  var buttonTYT: UIButton?
+  var buttonTwitter: LinkButton?
+  var buttonWebsite: LinkButton?
+  var buttonWolfPAC: LinkButton?
+  var buttonTYT: LinkButton?
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -41,12 +42,14 @@ class AboutViewController: UIViewController {
     
     contentHeight += spaceHorizontal
     
-    let buttonTwitter = UIButton(frame: CGRect(x: spaceVertical,
-                                               y: contentHeight,
-                                               width: 0,
-                                               height: 0))
-    buttonTwitter.setTitle("@EugeneBelinski", for: .normal)
-    buttonTwitter.addTarget(self, action: #selector(AboutViewController.didTapButtonTwitter(sender:)), for: .touchUpInside)
+    let buttonTwitter = LinkButton(frame: CGRect(x: spaceVertical,
+                                                 y: contentHeight,
+                                                 width: 0,
+                                                 height: 0))
+    buttonTwitter.link = Link(title: "@EugeneBelinski",
+                              appUrl: "twitter://user?screen_name=eugenebelinski",
+                              webURL: "https://twitter.com/EugeneBelinski")
+    buttonTwitter.addTarget(self, action: #selector(AboutViewController.didTapLinkButton(sender:)), for: .touchUpInside)
     setButtonStandardProperties(button: buttonTwitter)
     scrollView.addSubview(buttonTwitter)
     self.buttonTwitter = buttonTwitter
@@ -54,13 +57,15 @@ class AboutViewController: UIViewController {
     
     contentHeight += spaceHorizontal
     
-    let buttonWebsite = UIButton(frame: CGRect(x: spaceVertical,
-                                               y: contentHeight,
-                                               width: 0,
-                                               height: 0))
-    buttonWebsite.setTitle("My Website", for: .normal)
+    let buttonWebsite = LinkButton(frame: CGRect(x: spaceVertical,
+                                                 y: contentHeight,
+                                                 width: 0,
+                                                 height: 0))
+    buttonWebsite.link = Link(title: "My Website",
+                              appUrl: nil,
+                              webURL: "https://ebelinski.com")
     buttonWebsite.addTarget(self,
-                            action: #selector(AboutViewController.didTapButtonWebsite(sender:)),
+                            action: #selector(AboutViewController.didTapLinkButton(sender:)),
                             for: .touchUpInside)
     setButtonStandardProperties(button: buttonWebsite)
     scrollView.addSubview(buttonWebsite)
@@ -80,13 +85,15 @@ class AboutViewController: UIViewController {
     
     contentHeight += spaceHorizontal
     
-    let buttonWolfPAC = UIButton(frame: CGRect(x: spaceVertical,
-                                               y: contentHeight,
-                                               width: 0,
-                                               height: 0))
-    buttonWolfPAC.setTitle("Wolf PAC", for: .normal)
+    let buttonWolfPAC = LinkButton(frame: CGRect(x: spaceVertical,
+                                                 y: contentHeight,
+                                                 width: 0,
+                                                 height: 0))
+    buttonWolfPAC.link = Link(title: "WolfPAC",
+                              appUrl: nil,
+                              webURL: "http://www.wolf-pac.com")
     buttonWolfPAC.addTarget(self,
-                            action: #selector(AboutViewController.didTapButtonWolfPAC(sender:)),
+                            action: #selector(AboutViewController.didTapLinkButton(sender:)),
                             for: .touchUpInside)
     setButtonStandardProperties(button: buttonWolfPAC)
     scrollView.addSubview(buttonWolfPAC)
@@ -95,13 +102,15 @@ class AboutViewController: UIViewController {
     
     contentHeight += spaceHorizontal
     
-    let buttonTYT = UIButton(frame: CGRect(x: spaceVertical,
-                                           y: contentHeight,
-                                           width: 0,
-                                           height: 0))
-    buttonTYT.setTitle("TYT Network", for: .normal)
+    let buttonTYT = LinkButton(frame: CGRect(x: spaceVertical,
+                                             y: contentHeight,
+                                             width: 0,
+                                             height: 0))
+    buttonTYT.link = Link(title: "TYT Network",
+                          appUrl: nil,
+                          webURL: "https://tytnetwork.com")
     buttonTYT.addTarget(self,
-                        action: #selector(AboutViewController.didTapButtonTYT(sender:)),
+                        action: #selector(AboutViewController.didTapLinkButton(sender:)),
                         for: .touchUpInside)
     setButtonStandardProperties(button: buttonTYT)
     scrollView.addSubview(buttonTYT)
@@ -133,29 +142,33 @@ class AboutViewController: UIViewController {
                                   y: button.frame.origin.y)
     button.layer.cornerRadius = button.frame.height / 4
   }
-  
-  @objc func didTapButtonTwitter(sender: AnyObject) {
-    UIApplication.shared.open(URL(string: "https://twitter.com/EugeneBelinski")!,
-                              options: [:],
-                              completionHandler: nil)
+
+  @objc func didTapLinkButton(sender: AnyObject) {
+    guard let linkButton = sender as? LinkButton else { return }
+    guard let link = linkButton.link else { return }
+    open(link: link)
   }
-  
-  @objc func didTapButtonWebsite(sender: AnyObject) {
-    UIApplication.shared.open(URL(string: "http://ebelinski.com")!,
-                              options: [:],
-                              completionHandler: nil)
+
+  func open(link: Link) {
+    guard let appURL = link.appURL else {
+      guard let webURL = link.webURL else { return }
+      open(webUrlString: webURL)
+      return
+    }
+    UIApplication.shared.open(URL(string: appURL)!,
+                              options: [:]) {
+      success in
+      if !success {
+        guard let webURL = link.webURL else { return }
+        self.open(webUrlString: webURL)
+      }
+    }
   }
-  
-  @objc func didTapButtonWolfPAC(sender: AnyObject) {
-    UIApplication.shared.open(URL(string: "http://www.wolf-pac.com")!,
-                              options: [:],
-                              completionHandler: nil)
-  }
-  
-  @objc func didTapButtonTYT(sender: AnyObject) {
-    UIApplication.shared.open(URL(string: "https://tytnetwork.com")!,
-                              options: [:],
-                              completionHandler: nil)
+
+  func open(webUrlString: String) {
+    guard let url = URL(string: webUrlString) else { return }
+    let svc = SFSafariViewController(url: url)
+    present(svc, animated: true, completion: nil)
   }
   
 }
