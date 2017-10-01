@@ -119,8 +119,8 @@
 		B664DE481E1C6CF500302AAE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B647C7E61F8090B500FAC95C /* Link.swift */,
 				B65101D91E186322007F0ED0 /* Item.swift */,
+				B647C7E61F8090B500FAC95C /* Link.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -128,11 +128,11 @@
 		B664DE491E1C6CFF00302AAE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B647C7E41F80909A00FAC95C /* LinkButton.swift */,
 				B65101DF1E19B998007F0ED0 /* ItemTableViewCell.swift */,
 				B65101E01E19B998007F0ED0 /* ItemTableViewCell.xib */,
 				B664DE441E1C650D00302AAE /* ItemCollectionViewCell.swift */,
 				B664DE451E1C650D00302AAE /* ItemCollectionViewCell.xib */,
+				B647C7E41F80909A00FAC95C /* LinkButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
