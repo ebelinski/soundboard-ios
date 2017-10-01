@@ -10,11 +10,8 @@ class AboutViewController: UIViewController {
   let spaceHorizontal: CGFloat = 30
   let contentWidth: CGFloat = screenWidth - 20 * 2
   let fontSize: CGFloat = 28
-  
-  var buttonTwitter: LinkButton?
-  var buttonWebsite: LinkButton?
-  var buttonWolfPAC: LinkButton?
-  var buttonTYT: LinkButton?
+
+  var linkButtons: [LinkButton] = []
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -52,7 +49,7 @@ class AboutViewController: UIViewController {
     buttonTwitter.addTarget(self, action: #selector(AboutViewController.didTapLinkButton(sender:)), for: .touchUpInside)
     setButtonStandardProperties(button: buttonTwitter)
     scrollView.addSubview(buttonTwitter)
-    self.buttonTwitter = buttonTwitter
+    linkButtons.append(buttonTwitter)
     contentHeight += buttonTwitter.frame.height
     
     contentHeight += spaceHorizontal
@@ -69,7 +66,7 @@ class AboutViewController: UIViewController {
                             for: .touchUpInside)
     setButtonStandardProperties(button: buttonWebsite)
     scrollView.addSubview(buttonWebsite)
-    self.buttonWebsite = buttonWebsite
+    linkButtons.append(buttonWebsite)
     contentHeight += buttonWebsite.frame.height
     
     contentHeight += spaceHorizontal
@@ -97,7 +94,7 @@ class AboutViewController: UIViewController {
                             for: .touchUpInside)
     setButtonStandardProperties(button: buttonWolfPAC)
     scrollView.addSubview(buttonWolfPAC)
-    self.buttonWolfPAC = buttonWolfPAC
+    linkButtons.append(buttonWolfPAC)
     contentHeight += buttonTwitter.frame.height
     
     contentHeight += spaceHorizontal
@@ -114,7 +111,7 @@ class AboutViewController: UIViewController {
                         for: .touchUpInside)
     setButtonStandardProperties(button: buttonTYT)
     scrollView.addSubview(buttonTYT)
-    self.buttonWebsite = buttonTYT
+    linkButtons.append(buttonTYT)
     contentHeight += buttonTYT.frame.height
     
     contentHeight += spaceHorizontal
@@ -155,8 +152,7 @@ class AboutViewController: UIViewController {
       open(webUrlString: webURL)
       return
     }
-    UIApplication.shared.open(URL(string: appURL)!,
-                              options: [:]) {
+    UIApplication.shared.open(URL(string: appURL)!, options: [:]) {
       success in
       if !success {
         guard let webURL = link.webURL else { return }
