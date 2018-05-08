@@ -2,10 +2,12 @@ import UIKit
 
 let itemsCSVFileName = "items"
 
-let appColorDark = UIColor(red: 0.176, green: 0.294, blue: 0.376, alpha: 1) // #2d4b60
-let appColorMedium = UIColor(red: 0.278, green: 0.522, blue: 0.576, alpha: 1) // #478593
-let appColorLight = UIColor(red: 0.373, green: 0.651, blue: 0.714, alpha: 1) // #5fa6b6
-let appColorText = UIColor.white
+enum Color {
+  static let dark = UIColor(red: 0.176, green: 0.294, blue: 0.376, alpha: 1) // #2d4b60
+  static let medium = UIColor(red: 0.278, green: 0.522, blue: 0.576, alpha: 1) // #478593
+  static let light = UIColor(red: 0.373, green: 0.651, blue: 0.714, alpha: 1) // #5fa6b6
+  static let text = UIColor.white
+}
 
 let screenWidth = min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
 let screenHeight = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)

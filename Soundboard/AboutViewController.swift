@@ -16,7 +16,7 @@ class AboutViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    view.backgroundColor = appColorMedium
+    view.backgroundColor = Color.medium
     setUpScrollViewContent()
 
     Answers.logContentView(withName: "About",
@@ -124,13 +124,13 @@ class AboutViewController: UIViewController {
   private func setLabelStandardProperties(label: UILabel) {
     label.font = label.font.withSize(fontSize)
     label.numberOfLines = 0
-    label.textColor = appColorText
+    label.textColor = Color.text
     label.sizeToFit()
   }
   
   private func setButtonStandardProperties(button: UIButton) {
     button.titleLabel?.font = button.titleLabel?.font.withSize(fontSize)
-    button.setTitleColor(appColorDark, for: .normal)
+    button.setTitleColor(Color.dark, for: .normal)
     button.backgroundColor = UIColor.white
     button.sizeToFit()
     button.frame.size = CGSize(width: button.frame.size.width + 25,

@@ -11,14 +11,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     Fabric.with([Crashlytics.self])
 
-    UINavigationBar.appearance().barTintColor = appColorMedium
-    UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: appColorText]
+    UINavigationBar.appearance().barTintColor = Color.medium
+    UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: Color.text]
     
-    UITabBar.appearance().barTintColor = appColorDark
-    UITabBar.appearance().tintColor = appColorText
-    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: appColorText], for: .selected)
+    UITabBar.appearance().barTintColor = Color.dark
+    UITabBar.appearance().tintColor = Color.text
+    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: Color.text], for: .selected)
     
-    UISearchBar.appearance().barTintColor = appColorMedium
+    UISearchBar.appearance().barTintColor = Color.medium
 
     return true
   }

@@ -17,7 +17,7 @@ class SoundListViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    view.backgroundColor = appColorMedium
+    view.backgroundColor = Color.medium
     
     tableView.register(UINib(nibName: "ItemTableViewCell",
                              bundle: Bundle.main),

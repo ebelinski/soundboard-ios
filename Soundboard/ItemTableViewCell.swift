@@ -19,13 +19,13 @@ class ItemTableViewCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     
-    backgroundColor = appColorMedium
-    nameLabel.textColor = appColorText
-    descriptionLabel.textColor = appColorText
-    favoriteButtonContainer.backgroundColor = appColorDark
+    backgroundColor = Color.medium
+    nameLabel.textColor = Color.text
+    descriptionLabel.textColor = Color.text
+    favoriteButtonContainer.backgroundColor = Color.dark
     
     let bgColorView = UIView()
-    bgColorView.backgroundColor = appColorLight
+    bgColorView.backgroundColor = Color.light
     selectedBackgroundView = bgColorView
   }
   

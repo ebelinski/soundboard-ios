@@ -9,7 +9,7 @@ class SoundboardViewController: UICollectionViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    collectionView?.backgroundColor = appColorMedium
+    collectionView?.backgroundColor = Color.medium
     
     collectionView?.register(UINib(nibName: "ItemCollectionViewCell",
                                    bundle: Bundle.main),
@@ -26,7 +26,7 @@ class SoundboardViewController: UICollectionViewController {
                                                  width: screenWidth-80,
                                                  height: 300))
     instructionLabel.text = "Go to the All Sounds tab and tap on a heart to add a sound to your soundboard!"
-    instructionLabel.textColor = appColorText
+    instructionLabel.textColor = Color.text
     instructionLabel.numberOfLines = 10
     instructionLabel.sizeToFit()
     view.addSubview(instructionLabel)

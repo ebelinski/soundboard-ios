@@ -8,9 +8,9 @@ class ItemCollectionViewCell: UICollectionViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     
-    shortNameLabel.textColor = appColorText
-    backgroundColor = appColorMedium
-    shortNameLabelContainer.backgroundColor = appColorDark
+    shortNameLabel.textColor = Color.text
+    backgroundColor = Color.medium
+    shortNameLabelContainer.backgroundColor = Color.dark
     
     if screenWidth >= 768 {
       shortNameLabel.font = shortNameLabel.font.withSize(40)
