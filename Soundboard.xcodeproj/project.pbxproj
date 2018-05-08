@@ -167,8 +167,6 @@
 				B60CF0471E176B5E00F0E42C /* Sources */,
 				B60CF0481E176B5E00F0E42C /* Frameworks */,
 				B60CF0491E176B5E00F0E42C /* Resources */,
-				B838AB163F5912D2ADECA9A6 /* [CP] Embed Pods Frameworks */,
-				1E796ABE226E20C5E98A0BA6 /* [CP] Copy Pods Resources */,
 				B6EE45DE1F7F4BBF0024884D /* ShellScript */,
 			);
 			buildRules = (
@@ -234,21 +232,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1E796ABE226E20C5E98A0BA6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Soundboard/Pods-Soundboard-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		69574416FA90BBE9CC9FF0CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,21 +262,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 9b6e570711140935dd85b0aa555e44bd6a801ee2 18ee13cf1c0c7bc3e1b654b783b80ce526c083a7e8ce563b857bc3592bf24648";
-		};
-		B838AB163F5912D2ADECA9A6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Soundboard/Pods-Soundboard-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
