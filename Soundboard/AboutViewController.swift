@@ -44,7 +44,7 @@ class AboutViewController: UIViewController {
                                                  width: 0,
                                                  height: 0))
     buttonTwitter.link = Link(title: "@EugeneBelinski",
-                              appUrl: "twitter://user?screen_name=eugenebelinski",
+                              appURL: "twitter://user?screen_name=eugenebelinski",
                               webURL: "https://twitter.com/EugeneBelinski")
     buttonTwitter.addTarget(self, action: #selector(AboutViewController.didTapLinkButton(sender:)), for: .touchUpInside)
     setButtonStandardProperties(button: buttonTwitter)
@@ -59,7 +59,7 @@ class AboutViewController: UIViewController {
                                                  width: 0,
                                                  height: 0))
     buttonWebsite.link = Link(title: "My Website",
-                              appUrl: nil,
+                              appURL: nil,
                               webURL: "https://ebelinski.com")
     buttonWebsite.addTarget(self,
                             action: #selector(AboutViewController.didTapLinkButton(sender:)),
@@ -87,7 +87,7 @@ class AboutViewController: UIViewController {
                                                  width: 0,
                                                  height: 0))
     buttonWolfPAC.link = Link(title: "WolfPAC",
-                              appUrl: nil,
+                              appURL: nil,
                               webURL: "http://www.wolf-pac.com")
     buttonWolfPAC.addTarget(self,
                             action: #selector(AboutViewController.didTapLinkButton(sender:)),
@@ -104,7 +104,7 @@ class AboutViewController: UIViewController {
                                              width: 0,
                                              height: 0))
     buttonTYT.link = Link(title: "TYT Network",
-                          appUrl: nil,
+                          appURL: nil,
                           webURL: "https://tytnetwork.com")
     buttonTYT.addTarget(self,
                         action: #selector(AboutViewController.didTapLinkButton(sender:)),
