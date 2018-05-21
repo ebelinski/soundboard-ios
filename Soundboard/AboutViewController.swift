@@ -32,7 +32,7 @@ class AboutViewController: UIViewController {
                                                  y: contentHeight,
                                                  width: contentWidth,
                                                  height: 0))
-    informationPart1.text = "Soundboard for TYT was created by Eugene Belinski and is available for iOS and Android. Please contact me if you find any bugs, want me to add a new sound, or if you have any comment or suggestion."
+    informationPart1.text = "Gitboard is a soundboard created by Eugene Belinski and is available for iOS and Android. It contains sounds played on The Young Turks. Please contact me if you find any bugs, want me to add a new sound, or if you have any comment or suggestion."
     setLabelStandardProperties(label: informationPart1)
     scrollView?.addSubview(informationPart1)
     contentHeight += informationPart1.frame.height
@@ -75,7 +75,7 @@ class AboutViewController: UIViewController {
                                                  y: contentHeight,
                                                  width: contentWidth,
                                                  height: 0))
-    informationPart2.text = "If you liked this app, please consider making a donation to Wolf PAC or becoming a TYT member."
+    informationPart2.text = "If you like this app, please consider making a donation to Wolf PAC or becoming a TYT member."
     setLabelStandardProperties(label: informationPart2)
     scrollView.addSubview(informationPart2)
     contentHeight += informationPart2.frame.height
