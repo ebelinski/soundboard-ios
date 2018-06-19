@@ -48,6 +48,7 @@
 		B664DE421E1C64F100302AAE /* SoundboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundboardViewController.swift; sourceTree = "<group>"; };
 		B664DE441E1C650D00302AAE /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		B664DE451E1C650D00302AAE /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		B675F4B820D94F7000AE623A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B67F79721E185B5900462019 /* AudioAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AudioAssets.xcassets; sourceTree = "<group>"; };
 		B6B29D291E1DC84D00FA58C9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +67,7 @@
 		B60CF0421E176B5E00F0E42C = {
 			isa = PBXGroup;
 			children = (
+				B675F4B820D94F7000AE623A /* README.md */,
 				B60CF04D1E176B5E00F0E42C /* Soundboard */,
 				B60CF04C1E176B5E00F0E42C /* Products */,
 			);
