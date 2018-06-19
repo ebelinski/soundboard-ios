@@ -1,5 +1,4 @@
 import UIKit
-import Crashlytics
 
 struct ItemManager {
     
@@ -30,7 +29,6 @@ struct ItemManager {
       }
     } catch {
       print(error.localizedDescription)
-      Crashlytics.sharedInstance().recordError(error)
     }
     
     items.sort(by: {

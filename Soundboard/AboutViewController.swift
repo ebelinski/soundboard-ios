@@ -1,5 +1,4 @@
 import UIKit
-import Crashlytics
 import SafariServices
 
 class AboutViewController: UIViewController {
@@ -18,11 +17,6 @@ class AboutViewController: UIViewController {
     
     view.backgroundColor = Color.medium
     setUpScrollViewContent()
-
-    Answers.logContentView(withName: "About",
-                           contentType: nil,
-                           contentId: nil,
-                           customAttributes: nil)
   }
   
   private func setUpScrollViewContent() {
